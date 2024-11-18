@@ -22,27 +22,25 @@ function App() {
   }, []);
 
   // Attempt login with saved token
- // Inside App.js or App.jsx
-const attemptLoginWithToken = async () => {
-  const token = window.localStorage.getItem("token");
-  console.log("Token being sent:", token); // Log the token before sending
+  const attemptLoginWithToken = async () => {
+    const token = window.localStorage.getItem("token");
+    console.log("Token being sent:", token); // Log the token before sending
 
-  if (token) {
-    const response = await fetch(`http://localhost:3000/api/auth/me`, {
-      headers: {
-        Authorization: `Bearer ${token}`, // Ensure Bearer prefix is included
-      },
-    });
-    const json = await response.json();
-    if (response.ok) {
-      setAuth(json); // Set authenticated user
-    } else {
-      console.log("Token invalid or expired, removing it.");
-      window.localStorage.removeItem("token"); // Remove invalid token
+    if (token) {
+      const response = await fetch(`http://localhost:3000/api/auth/me`, {
+        headers: {
+          Authorization: `Bearer ${token}`, // Ensure Bearer prefix is included
+        },
+      });
+      const json = await response.json();
+      if (response.ok) {
+        setAuth(json); // Set authenticated user
+      } else {
+        console.log("Token invalid or expired, removing it.");
+        window.localStorage.removeItem("token"); // Remove invalid token
+      }
     }
-  }
-};
-
+  };
 
   // Authentication action for login and register
   const authAction = async (credentials, mode) => {
@@ -64,7 +62,6 @@ const attemptLoginWithToken = async () => {
       throw json;
     }
   };
-  
   
   // Logout function
   const logout = () => {
@@ -140,9 +137,7 @@ const attemptLoginWithToken = async () => {
           path="/users/:id"
           element={<UserDetail auth={auth} />}
         />
-        {!!auth.id && (
-          <Route path="/createReview" element={<CreateReview auth={auth} />} />
-        )}
+        <Route path="/createReview" element={<CreateReview auth={auth} />} />
         <Route path="/login" element={<Login authAction={authAction} />} />
         <Route path="/register" element={<Register authAction={authAction} />} />
       </Routes>

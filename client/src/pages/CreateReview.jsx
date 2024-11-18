@@ -33,7 +33,7 @@ const CreateReview = ({ auth }) => {
     console.log("Token being sent:", token); // Log the token for debugging
     
     try {
-      const response = await fetch(`http://localhost:3000/api/reviews/businesses/${selectedBusinessId}/reviews`, {
+      const response = await fetch(`http://localhost:3000/api/reviews/businesses/${selectedBusinessId}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
