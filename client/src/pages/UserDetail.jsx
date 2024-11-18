@@ -41,7 +41,7 @@ const UserDetail = ({ auth }) => {
 
   return (
     <div>
-      <h1>User Reviews</h1>
+      <h1>Reviews from User</h1>
       {error ? (
         <p>Error: {error}</p>
       ) : reviews.length > 0 ? (
@@ -56,7 +56,7 @@ const UserDetail = ({ auth }) => {
           </div>
         ))
       ) : (
-        <p>No reviews found.</p>
+        <p>0 reviews found.</p>
       )}
     </div>
   );

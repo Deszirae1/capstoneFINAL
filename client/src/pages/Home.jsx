@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 
 const Home = ({ auth, authAction, logout, businesses, users, reviews }) => {
   const totalRating = reviews.reduce((acc, review) => acc + review.rating, 0);
@@ -57,7 +58,7 @@ const Home = ({ auth, authAction, logout, businesses, users, reviews }) => {
 
   return (
     <div style={containerStyle}>
-      <h1 style={headingStyle}>Welcome to Acme Business Reviews</h1>
+      <h1 style={headingStyle}>The Beauty Shop Reviews </h1>
 
       <section style={sectionStyle}>
         <h2 style={subheadingStyle}>Overview</h2>
@@ -118,6 +119,7 @@ const Home = ({ auth, authAction, logout, businesses, users, reviews }) => {
             You are logged in as <strong>{auth.username}</strong>. You can <Link to="/createReview" style={linkStyle}>create a review</Link> or{" "}
             <button onClick={logout} style={buttonStyle}>Logout</button>.
           </p>
+          <Footer />  
         </section>
       )}
     </div>

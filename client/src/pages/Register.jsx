@@ -17,11 +17,11 @@ const Register = ({ authAction }) => {
 
   return (
     <div className="register-container">
-      <h1>Be our friend!</h1>
+      <h1>Come, be our friend!!</h1>
       <AuthForm authAction={handleAuthAction} mode="register" />
       {error && <div className="error-message">{error}</div>}
       <p>
-        Already have an account?{" "}
+        Already our friend? Login. ?{" "}
         <button onClick={() => navigate("/login")} className="login-link">
           Log in here
         </button>

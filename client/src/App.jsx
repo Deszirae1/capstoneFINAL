@@ -93,7 +93,7 @@ const attemptLoginWithToken = async () => {
   return (
     <>
       <header>
-        <h1>Acme Business Reviews</h1>
+        <h1>The Beauty Shop</h1>
       </header>
       <nav>
         <Link to="/" className="nav-link">Home</Link>

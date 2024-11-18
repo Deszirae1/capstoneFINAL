@@ -2,11 +2,11 @@ body {
   font-family: verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #ee0799;
 }
 
 header {
-  background-color: #3b5998;
+  background-color: #13f104;
   padding: 1rem;
   color: white;
   text-align: center;
@@ -15,13 +15,13 @@ header {
 nav {
   display: flex;
   justify-content: center;
-  background-color: #333;
+  background-color:white#333;
   padding: 0.5rem;
   flex-wrap: wrap;
 }
 
 .nav-link {
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   padding: 0.5rem;
   margin: 0.5rem;
@@ -29,7 +29,7 @@ nav {
 }
 
 .nav-link:hover {
-  background-color: #555;
+  background-color: #d3f306;
 }
 
 .logout-btn {
@@ -43,7 +43,7 @@ nav {
 }
 
 .logout-btn:hover {
-  background-color: #ff3339;
+  background-color: #2207ef;
 }
 
 form {
@@ -62,7 +62,7 @@ form > * {
 }
 
 .error {
-  background-color: tomato;
+  background-color: rgb(255, 71, 71);
   padding: 0.5rem;
   color: cornSilk;
   border-radius: 4px;
@@ -102,7 +102,7 @@ form > * {
 
 .login-container h1 {
   font-size: 2rem;
-  color: #333;
+  color: #06efe7;
   margin-bottom: 1rem;
 }
 
@@ -116,7 +116,7 @@ form > * {
 
 .register-link {
   margin-top: 1rem;
-  color: #3b5998;
+  color: #f305d7;
   text-decoration: none;
   font-size: 1rem;
 }
@@ -135,7 +135,7 @@ form {
   padding: 1.5rem;
   background-color: white;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px, pink, 10, 107, 0.1;
 }
 
 form input,
@@ -159,7 +159,7 @@ form button {
 }
 
 form button:hover {
-  background-color: #4e72b0;
+  background-color: #93b04e;
 }
 
 @media (max-width: 768px) {
@@ -191,7 +191,7 @@ form button:hover {
 
 .register-container h1 {
   font-size: 2rem;
-  color: #333;
+  color: #333333;
   margin-bottom: 1rem;
 }
 
@@ -224,7 +224,7 @@ form {
   padding: 1.5rem;
   background-color: white;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(4, 244, 228, 0.1);
 }
 
 form input,
@@ -248,7 +248,7 @@ form button {
 }
 
 form button:hover {
-  background-color: #4e72b0;
+  background-color: #09e695;
 }
 
 @media (max-width: 768px) {
